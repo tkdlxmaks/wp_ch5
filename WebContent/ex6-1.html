@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	/* 빈 객체를 나타낼땐 이렇게 표현한다. */
+	var employee = {
+			name : "홍길동",
+			title : "과장",
+			showInfo : function () {
+				console.log(this.name + " : " + this.title);
+			}
+			
+	}; 
+	
+	employee.showInfo();
+</script>
+</head>
+<body>
+</body>
+</html>

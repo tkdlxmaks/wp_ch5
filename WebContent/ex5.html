@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/* 전역 객체 Window */
+	var number =10;
+	var message = "Hello";
+	
+	console.log(number);
+	console.log(window.number);
+	console.log(window.message);
+
+	
+	/* 객체의 생성 */
+	var employee = new Object();
+	console.log(employee);
+	
+	employee.name = "안대혁";
+	employee.title = "과장";
+	employee.info = function() {
+		console.log(this.name + " : " + this.title );
+	}
+
+	employee.info(function() {
+		return "....";
+	});
+</script>
+</head>
+<body>
+
+</body>
+</html>

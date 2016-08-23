@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	var d1 =  new Date();
+	console.log(d1);
+	
+	var d2 = new Date(2012, 8, 18); // 월 : 0 ~ 11
+	
+	var d3 = new Date( 10000000 * 1000); // milliseconds
+	console.log(d3);
+	
+	var days = ["일","월","화","수","목","금","토"];
+	
+	console.log(d1.getYear() + 1900 + "년");
+	console.log(d1.getMonth() + 1 + "월");
+	console.log(d1.getDate() + "일");
+	
+	console.log(days[d1.getDay()]);
+	console.log(d1.getHours()+"시");
+	console.log(d1.getMinutes()+"분");
+	console.log(d1.getSeconds()+"초");
+</script>
+</head>
+<body>
+
+</body>
+</html>

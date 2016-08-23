@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+var displayDate = function() {
+	var btnElement = this;
+	btnElement.onclick = function() {
+		var btnElement = this;
+		btnElement.innerText = "<em>clicked</em>";
+		console.log('onClicked!');
+		var pElement = document.getElementById("demo");
+		var now = new Date();
+		pElement.innerHTML = 
+		"<em>" +
+		+ (now.getYear() +1900) +"년 " 
+		+ (now.getMonth() + 1) + "월"
+		+ (now.getDate() ) +"일"
+		+(now.getHours() ) +":"
+		+(now.getMinutes() ) +":"
+		+(now.getSeconds() ) 
+		+ "</em>";
+		
+	}
+}
+
+var clearDate = function() {
+	var btnElement = this;
+	btnElement.innerText = "Try it";
+	
+	var pElement = document.getElementById	("demo");
+		pElement.innerHTML = "";
+} 
+
+window.onload = function() {
+		var btnElement = document.getElementById("myBtn");
+		btnElement.onclick = displayDate;
+		btnElement.onmouseover = displayDate;
+		btnElement.onmouseout = clearDate;
+	}
+	
+// IE 에서만 지원
+window.onunload = function() {
+	console.log("get out!");
+}
+</script>
+
+</head>
+
+<body onload="onload()" >
+	<!-- onLoad() 를 실행하라 -->
+
+	<p>
+		버튼을 클릭하면 <em>displayDate()</em> 함수가 실행 됩니다.
+	</p>
+
+	<button id="myBtn">Try it</button>
+
+	<p id="demo"></p>
+
+</body>
+</html>

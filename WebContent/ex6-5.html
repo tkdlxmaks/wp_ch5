@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Rectangle</title>
+<script>
+	var Rectangle = function(x1, y1, x2, y2, color) {
+		this.x1 = x1;
+		this.y1 = y1;
+		this.x2 = x2;
+		this.y2 = y2;
+		this.color = color;
+
+	}
+
+	Rectangle.prototype.show = function() {
+		console.log(this.x1 + " , " + this.y1 + " , " + this.x2 + " , "
+				+ this.y2 + " , " + this.color);
+
+		document.write("<div style='"
+			+"position:absolute;"
+			+"width:"+( this.x2 - this.x1 )  + "px;" 
+			+"height:"+( this.y2 - this.y1 )  + "px;" 
+			+"background-color:"+this.color +";" 
+			+"'>" 
+			+"</div>");		
+	}
+
+	var rect1 = new Rectangle(100, 100, 250, 200, "#00f");
+	var rect2 = new Rectangle(400, 300, 500, 700, "#edf");
+	var rect3 = new Rectangle(1000, 400, 1300, 650, "#f23");
+	rect1.show();
+	rect2.show();
+	rect3.show();
+</script>
+</head>
+<body>
+
+</body>
+</html>

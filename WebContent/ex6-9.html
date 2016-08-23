@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var s1 = "Hello world";
+	var s2 = "Hello world";
+
+	console.log(s1 == s2);
+	console.log(s1 === s2);
+
+	/* indexOf */
+	var str = "string1 string2 string3";
+	console.log(str.indexOf("string2"));
+	console.log(str.indexOf("string22"));
+	console.log(str.indexOf("str"));
+
+	/* subStr */
+	var str1 = str.substr(8);
+	console.log(str1);
+
+	var str2 = str.substr(8, 10);
+	console.log(str2);
+
+	/* split */
+	var result = str.split(" ");
+	console.log(result);
+
+	/* encoding escape , ecodeUrIComponent */
+	// a ~ z, A ~ Z, 0 ~ 9 , *_+- 가 아니면 다 encdoing시킨다.
+	var url = "http://mysite.com/?stuff=\"안 대혁!&bar=10";
+	console.log(escape(url));
+	console.log(encodeURI(url));
+	console.log(encodeURIComponent(url));
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

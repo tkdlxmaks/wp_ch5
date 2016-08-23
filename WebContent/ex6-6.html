@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+	
+	/* Array 내장 객체 생성 */
+	
+	// 생성자
+	var a1 = new Array();
+	console.log(a1);
+	
+	var a2 = new Array(10);
+	a2[20] = "hello";
+	console.log(a2);
+	
+	var f = function() {
+		console.log("function method")
+	}
+	var a3  = new Array(
+			1 , 
+			"Hello" , 
+			true, 
+			function(){ console.log("Hello!!!") } ,
+			f ,
+			{	name:"안대혁",  title:"강사"	}
+	);
+	
+	console.log(a3);
+	a3[3]();
+	a3[4]();
+	console.log(a3[5].name);
+</script>
+<body>
+
+</body>
+</html>

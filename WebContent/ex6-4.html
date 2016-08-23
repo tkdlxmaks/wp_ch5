@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	/* JSON */
+	/* function을 이용한 여러 객체 생성방법 (prototype기반의 객체 생성) */
+
+	var employee = function(name, title) {
+		this.name = name;
+		this.title = title;
+		this.info = function() {
+			console.log(this.name + ":" + this.title);
+		}
+	}
+	
+	
+	
+	employee.prototype.boss = "고길동";
+	
+	var e1 = new employee("둘리", "백수");
+	e1.info();
+
+	var e2 = new employee("마이콜", "가수");
+	e2.info();
+
+	var e3 = new employee("도우너", "백수");
+	e3.info();
+
+	var e4 = new employee("또치", "백조");
+	e4.info();
+
+	/* 재정의 */
+	e4.boss = "안대혁";
+	e4.info = function() {
+		console.log(this.boss + " : " + this.name + " : " + this.title);
+	}
+	e4.info();
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
